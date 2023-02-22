@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: msorder
+  cassandra:
+    keyspace-name: ${CASSANDRA_KEYSPACE}
+    contact-points: ${CASSANDRA_HOST}
+    port: ${CASSANDRA_PORT}
+    username: ${CASSANDRA_USERNAME}
+    password: ${CASSANDRA_PASSWORD}
+service:
+  controller:
+    path: /ms-order
+  dateFormat: dd/MM/yyyy
+  message:
+    error:
+      default: Microservice error, please try again later
+      validation: Data validation error
+      file: Cannot read error catalog file
+      serviceResponse: Failed to interpret error message from called component
+  errorCatalog:
+    path: errorCatalog.json
+server:
+  port: 8080

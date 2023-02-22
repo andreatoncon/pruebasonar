@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ms-order-properties
+  namespace: producto-digital
+  labels:
+    app: ms-order
+data:
+  CASSANDRA_KEYSPACE: "producto_digital"
+  CASSANDRA_HOST: "http://cassandra.cassandra"
+  CASSANDRA_PORT: "9042"
+  ERROR_CATALOG_PATH: "/opt/secret/errorCatalog.json"
